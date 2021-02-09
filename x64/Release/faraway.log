@@ -1,0 +1,8 @@
+﻿  prnMarquee.c
+prnMarquee.c(10): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+d:\projects.017\faraway\faraway.000.a00\faraway\anaglyphcamera2.cpp(342): warning C4172: returning address of local variable or temporary: box
+  All 360 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  faraway.vcxproj -> D:\PROJECTS.017\Faraway\faraway.000.a00\faraway\x64\Release\faraway.exe
+  faraway.vcxproj -> D:\PROJECTS.017\Faraway\faraway.000.a00\faraway\x64\Release\faraway.pdb (Full PDB)

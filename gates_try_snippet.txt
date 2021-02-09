@@ -1,0 +1,34 @@
+	// preparative operations
+	/********** now to debug gate installation function **********/
+	CxGate* gates[10] = {0};	// array of 10 gates to debug
+	u16 nGCnt = 0;			// counts gates, must not exceed 10
+	core::vector3df posGateDeb[3]; // for LD, RD corners and U defining position of the gates...
+	u16 nClk = 0; // counts clicks
+
+	// in the main loop:
+			if(receiver.GetMouseState().RightButtonDown)
+			{
+				Sleep(500);
+				if(nClk<3)
+				{
+					posGateDeb[nClk] = bilDeb->getPosition();
+					nClk++;
+				}
+				else
+				{
+					nClk = 0;
+					if(nGCnt++>10)	nGCnt = 0;
+					// if(gates[nGCnt])	delete gates[nGCnt];
+					scene::ISceneNode* nodElem = smgr->addCubeSceneNode(1.f);
+					gates[nGCnt] = new CxGate(smgr, nodCity01, -1, (scene::ISceneNode*)0, nodElem, met,
+						posGateDeb[0], posGateDeb[1], posGateDeb[2], .1f);
+						
+				}
+			}
+
+
+	// after the main loop:
+	for(int i=0; i<10; i++)
+	{
+		if(gates[i]) delete gates[i];
+	}
